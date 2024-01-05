@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    function checkLeapYear() {
+      var year = parseInt(document.getElementById("yearInput").value);
+      var result = document.getElementById("result");
+
+      if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+        result.innerHTML = year + " - високосный год<br>Количество дней в году: 366";
+      } else {
+        result.innerHTML = year + " - не високосный год<br>Количество дней в году: 365";
+      }
+    }
+  </script>
+</head>
+<body>
+  <label for="yearInput">Введите год:</label>
+  <input type="text" id="yearInput">
+  <button onclick="checkLeapYear()">Проверить</button>
+
+  <div id="result"></div>
+</body>
+</html>
