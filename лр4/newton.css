@@ -1,0 +1,44 @@
+.newton_cradle {
+  position: absolute; top: 10 px; left: 600px;
+  width: 275px; height: 160px; padding: 0 0 0 25px;
+  border-top: 10px solid silver; border-left: 10px silver; border-right: 10px silver; border-radius: 20px 20px 0 0;
+}
+
+.newton_cradle::before {
+  display: block;
+  position: absolute; top: -10px; left: 20px;
+  width: 260px; height: 10px; background: silver;
+}
+
+.newton_cradle::after {
+  display: block;
+  position: absolute; bottom: -20px; left: -50px;
+  width: 400px; height: 20px; border-radius: 25px 25px 0 0;
+  background: silver; border: 2px solid silver; box-shadow: 1px 5px 10px 3px rgb(0 0 0 / 10%);
+  text-align: center; font-size: 10px; font-family: Verdana; color: dimgray; letter-spacing: 1px; line-height: 20px;
+}
+
+.ball {
+  z-index: -1; float: left; position: relative;
+  margin-top: 100px; width: 50px; height: 50px;
+  background: silver;
+  background: silver;
+  border-radius: 100%; transform-origin: 50% -100px;
+}
+
+.ball::before {
+  content: ''; display: block; position: absolute; top: 10px; left: 10px;
+  width: 20px; height: 20px; border-radius: 100%;
+  background-color: white; filter: blur(5px);
+}
+
+.ball::after {
+  content: ''; display: block; position: absolute;
+  top: -100px; left: 24px; height: 100px; width: 1px; background: gray;
+}
+
+.ball:nth-child(1) {animation: ball1 0.5s infinite alternate 0.5s ease-out;}
+.ball:nth-child(5) {animation: ball5 0.5s infinite alternate ease-out;}
+
+@keyframes ball1 {0%,50% {transform: rotate(0);} 100% {transform: rotate(30deg);}}
+@keyframes ball5 {0%,50% {transform: rotate(0);} 100% {transform: rotate(-30deg);}}
