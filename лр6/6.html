@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Формуляр читателя</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+     <h1 class="h1">Формуляр читателя городской библиотеки</h1><center>
+    <form id="reader-form">
+       
+        <label for="surname">Введите фамилию:</label>
+        <input type="text" id="surname" name="surname" placeholder="Фамилия" required>
+
+        <label for="name">Введите имя:</label>
+        <input type="text" id="name" name="name" placeholder="Имя" required>
+
+        <label for="patronymic">Введите отчество:</label>
+        <input type="text" id="patronymic" name="patronymic" placeholder="Отчество" required>
+
+        <label for="gender">Пол:</label>
+        <select id="gender" name="gender" required>
+            <option value="" disabled selected>Выберите пол</option>
+            <option value="male">Мужской</option>
+            <option value="female">Женский</option>
+            
+        </select>
+
+        <label for="birthdate">Дата рождения:</label>
+        <input type="date" id="birthdate" name="birthdate" required>
+
+        <label for="work">Место работы и должность (если работает):</label>
+        <input type="text" id="work" name="work" placeholder="Введите место работы">
+
+        <label for="school">Учебное заведение, год обучения (если учится):</label>
+        <input type="text" id="school" name="school" placeholder="Введите место обучения и год">
+
+        <label for="home">Адрес проживания:</label>
+        <input type="text" id="home" name="home" placeholder="Введите адрес">
+
+        </select>
+
+        <label for="passport">Данные паспорта:</label>
+        <input type="text" id="passport" name="passport" placeholder="Номер, кем выдан, дата выдачи, срок действия">
+
+        <label for="phone">Номер телефона:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Введите номер телефона" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="Введите электронную почту" required>
+
+        <input type="submit" value="Отправить">
+    </form>
+
+
+<script>
+    document.getElementById('reader-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        var form = event.target;
+        var surname = form.surname.value;
+        var name = form.name.value;
+        var patronymic = form.patronymic.value;
+        var gender = form.gender.value;
+        var birthdate = form.birthdate.value;
+        var work = form.work.value;
+        var school = form.school.value;
+        var home = form.home.value;
+        var passport = form.passport.value;
+        var phone = form.phone.value;
+        var email = form.email.value;
+
+        if (surname.trim() === '' || name.trim() === '' || patronymic.trim() === '') {
+            alert('Пожалуйста, заполните все обязательные поля.');
+            return;
+        }
+
+        // Добавьте другие проверки здесь
+        // ...
+
+        alert('Форма успешно заполнена!');
+        form.reset();
+    });
+</script>
+</body>
+</html>
