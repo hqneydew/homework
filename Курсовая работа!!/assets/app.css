@@ -1,0 +1,100 @@
+html[data-theme="light"] .card {
+    background: #ebd6d9;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 140vh;
+}
+
+.card {
+    box-shadow: 0.0145rem 0.029rem 0.174rem rgba(0, 0, 0, 0.01698),
+    0.0335rem 0.067rem 0.402rem rgba(0, 0, 0, 0.024),
+    0.0625rem 0.125rem 0.75rem rgba(0, 0, 0, 0.03),
+    0.1125rem 0.225rem 1.35rem rgba(0, 0, 0, 0.036),
+    0.2085rem 0.417rem 2.502rem rgba(0, 0, 0, 0.04302),
+    0.5rem 1rem 6rem rgba(0, 0, 0, 0.06),
+    0 0 0 0.0625rem rgba(0, 0, 0, 0.015);
+    background: #ebd6d9;
+    border-radius: 0.25rem;
+    padding: 40px;
+}
+
+form {
+    min-width: 500px;
+    max-width: 700px;
+}
+
+#menu {margin-top: 50px;
+  background-color: #444;
+  color: #fff;
+  padding: 30px;
+  text-align: center;
+  width: 100%
+}
+
+.reg { color: #f48da0;
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 200px;
+  align-items: center;
+}
+
+.reg2 { color: white;
+  font-size: 19px;
+  font-weight: bold;
+  margin-left: 0px;
+  align-items: center;
+}
+
+.log { color: #f48da0;
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 250px;
+  align-items: center;
+}
+
+.btn1 {
+background-color: #f48da0;
+  color: white;
+  text-align: center;
+  margin-left: 0px;
+  padding: 17px;
+}
+
+.btn2 {
+background-color: #f48da0;
+  color: red;
+  text-align: center;
+  margin-left: 0px;
+  padding: 17px;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    padding: 100px;
+}
+
+.notice {
+    padding: 10px;
+    border-radius: 6px;
+    margin: 20px 0;
+}
+
+.notice.error {
+    border: 2px solid red;
+    background: red;
+    color: white;
+}
+
+.notice.success {
+    border: 2px solid red;
+    background: pink;
+    color: white;
+}
